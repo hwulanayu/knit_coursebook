@@ -77,7 +77,7 @@ Make `preamble.tex` and save in line (sejajar) with the Rmd file and contain the
 
 ### 5. No space between subheading 4 and the next paragraph
 
-xelatex doesn't read subheading 4 (####). make sure there is a `\hfill\\` between the title and the paragraph below it so that there is a space between them. example:
+xelatex doesn't read subheading 4 (####). make sure there is a `\hfill\\` between the title and the paragraph below it so that there is a space between them. 
 
 Example:
 ```
