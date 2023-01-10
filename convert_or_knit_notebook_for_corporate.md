@@ -6,6 +6,8 @@ The product team is often asked to make a notebook for several materials in one 
 
 Refer to this [guideline](https://github.com/Litaa/convert-jupyter-to-rmd) to convert jupyter ipynb to rmd files.
 
+> Note: if you get an error when you knit Rmd to pdf, try to block all the code with `ctrl + a` in jupyter.R and converter.R before running it. Make sure each variable appears in the rstudio env.
+
 ## Using R programming language
 
 One step easier.
@@ -23,23 +25,7 @@ date: "October, 2022"
 ---
 ```
 
-3. Error unicode
-
-use xelatex engine.
-```
----
-title: 'Data Science in Python Specialization: PT XYZ'
-author: "Algoritma"
-date: "October, 2022"
-output:
-  pdf_document:
-    toc: yes
-    toc_depth: 4
-    latex_engine: xelatex
----
-```
-
-4. offside Code:
+3. offside Code:
 ```
 ---
 title: 'Data Science in Python Specialization: PT XYZ'
@@ -56,7 +42,7 @@ output:
 ---
 ```
 
-5. Offside Output Code:
+4. Offside **Output** Code:
 ```
 ---
 title: 'Data Science in Python Specialization: PT XYZ'
@@ -87,10 +73,11 @@ Make `preamble.tex` and save in line (sejajar) with the Rmd file and contain the
 ```
 
 
-6. No space between subheading 4 and the next paragraph
+5. No space between subheading 4 and the next paragraph
 
 xelatex doesn't read subheading 4 (####). make sure there is a `\hfill\\` between the title and the paragraph below it so that there is a space between them. example:
 
+Example:
 ```
 #### Theory
 
@@ -98,6 +85,28 @@ xelatex doesn't read subheading 4 (####). make sure there is a `\hfill\\` betwee
 
 Logistic regression is a classification algorithm used to fit a regression curve, $y = f(x)$ ...
 ```
+6. Page Break for new materials
+
+To make a complete Table of Contents, you must copy all the codes and narration from each Rmd file into a one-big Rmd file. Ensure the first page of new materials is always on a new page. You can use `\newpage`.
+
+Example:
+```
+## References
+
+- [Prophet Documentation](https://facebook.github.io/prophet/docs/quick_start.html)
+- [Paper: Forecasting at Scale](https://peerj.com/preprints/3190/)
+- [Algoritma: Time Series Forecasting using `prophet` in R](https://business-forecasting.netlify.app/#5_time_series_forecasting_using_prophet)
+- [Algoritma: Time Series Forecasting using `prophet` in Python](https://github.com/tomytjandra/tsf-prophet)
+
+\newpage
+
+# Neural Network and Deep Learning
+
+**Coursebook: Neural Network and Deep Learning**
+
+- Part 11 of Machine .......
+```
+
 ## Error
 
 ### Error using modulo operator (%)
@@ -113,4 +122,19 @@ just comment the line.
 ```{python echo=T, results='hide'}
 
 
+```
+### Error unicode
+
+use xelatex engine.
+```
+---
+title: 'Data Science in Python Specialization: PT XYZ'
+author: "Algoritma"
+date: "October, 2022"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 4
+    latex_engine: xelatex
+---
 ```
