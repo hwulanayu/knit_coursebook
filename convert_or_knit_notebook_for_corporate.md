@@ -112,5 +112,5 @@ just comment the line.
 ```{python echo=T, results='hide'}
 ```{python echo=T, results='hide'}
 
-```
+
 ```
