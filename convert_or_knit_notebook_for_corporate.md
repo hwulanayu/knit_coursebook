@@ -8,15 +8,17 @@ Refer to this [guideline](https://github.com/Litaa/convert-jupyter-to-rmd) to co
 
 > Note: if you get an error when you knit Rmd to pdf, try to block all the code with `ctrl + a` in jupyter.R and converter.R before running it. Make sure each variable appears in the rstudio env.
 
+> Another Note: include **all** of the assets, data_inputs, scripts, etc in the `Rmd` folder
+
 ## Using R programming language
 
 One step easier.
 
 ## Anticipate revise from BD team: YAML format
 
-1. Ask example pdf from previous corporate training.
+### 1. Ask example pdf from previous corporate training.
 
-2. Title, author, date
+### 2. Title, author, date
 ```
 ---
 title: 'Data Science in Python Specialization: PT XYZ'
@@ -25,7 +27,7 @@ date: "October, 2022"
 ---
 ```
 
-3. offside Code:
+### 3. Offside Code:
 ```
 ---
 title: 'Data Science in Python Specialization: PT XYZ'
@@ -42,7 +44,7 @@ output:
 ---
 ```
 
-4. Offside **Output** Code:
+### 4. Offside **Output** Code:
 ```
 ---
 title: 'Data Science in Python Specialization: PT XYZ'
@@ -73,7 +75,7 @@ Make `preamble.tex` and save in line (sejajar) with the Rmd file and contain the
 ```
 
 
-5. No space between subheading 4 and the next paragraph
+### 5. No space between subheading 4 and the next paragraph
 
 xelatex doesn't read subheading 4 (####). make sure there is a `\hfill\\` between the title and the paragraph below it so that there is a space between them. example:
 
@@ -85,7 +87,7 @@ Example:
 
 Logistic regression is a classification algorithm used to fit a regression curve, $y = f(x)$ ...
 ```
-6. Page Break for new materials
+### 6. Page Break for new materials
 
 To make a complete Table of Contents, you must copy all the codes and narration from each Rmd file into a one-big Rmd file. Ensure the first page of new materials is always on a new page. You can use `\newpage`.
 
