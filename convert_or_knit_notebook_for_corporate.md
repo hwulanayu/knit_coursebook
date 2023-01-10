@@ -110,5 +110,7 @@ just comment the line.
 ### Text line contains an invalid character from Output results
 
 ```{python echo=T, results='hide'}
+```{python echo=T, results='hide'}
 
+```
 ```
